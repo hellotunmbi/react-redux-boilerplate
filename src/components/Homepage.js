@@ -5,16 +5,16 @@ import { createProject } from "../redux/actions/projectActions";
 class Homepage extends Component {
   state = {
     title: "",
-    content: ""
+    content: "",
   };
 
-  handleChange = e => {
+  handleChange = (e) => {
     this.setState({
-      [e.target.id]: e.target.value
+      [e.target.id]: e.target.value,
     });
   };
 
-  handleSubmit = e => {
+  handleSubmit = (e) => {
     e.preventDefault();
     this.props.createProject(this.state);
   };
@@ -52,7 +52,7 @@ class Homepage extends Component {
 
             <ul>
               {projects &&
-                projects.map(project => (
+                projects.map((project) => (
                   <li key={project.title}>
                     {project.title} - {project.content}
                   </li>
@@ -65,15 +65,15 @@ class Homepage extends Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
-    projects: state.project.projects
+    projects: state.project.projects,
   };
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    createProject: project => dispatch(createProject(project))
+    createProject: (project) => dispatch(createProject(project)),
   };
 };
 

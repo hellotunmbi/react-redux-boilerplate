@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 
+// Import styles
 import "./assets/css/bootstrap.min.css";
 import "./assets/css/metismenu.min.css";
 import "./assets/css/icons.css";
@@ -10,6 +11,7 @@ import "./assets/css/style.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
+// Import Redux
 import { createStore, applyMiddleware } from "redux";
 import rootReducer from "./redux/reducers/rootReducer";
 import { Provider } from "react-redux";
